@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
       
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v3
@@ -53,7 +53,7 @@ jobs:
     needs: security-scan
     steps:
     - name: Checkout code
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
       
     - name: Setup Node.js
       uses: actions/setup-node@v4
@@ -108,7 +108,7 @@ jobs:
       image-tag: ${{ steps.image-tag.outputs.tag }}
     steps:
     - name: Checkout code
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
       
     - name: Generate image tag
       id: image-tag
@@ -156,7 +156,7 @@ jobs:
     environment: development
     steps:
     - name: Checkout code
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
       
     - name: Azure Login using OIDC
       uses: azure/login@v2
@@ -187,7 +187,7 @@ jobs:
     environment: production
     steps:
     - name: Checkout code
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
       
     - name: Azure Login using OIDC
       uses: azure/login@v2
